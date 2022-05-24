@@ -1,0 +1,15 @@
+---
+
+services:
+  proxy:
+    image: ghcr.io/applicreation/harmony-proxy:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/modules:ro
+  core:
+    image: ghcr.io/applicreation/harmony-core:latest
+  catalog:
+    image: nginx:1-alpine
+    volumes:
+      - ./app:/usr/share/nginx/html:ro
