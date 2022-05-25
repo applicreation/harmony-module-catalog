@@ -5,8 +5,6 @@ services:
     image: ghcr.io/applicreation/harmony-proxy:latest
     ports:
       - 80:80
-    volumes:
-      - ./nginx:/etc/nginx/conf.d/modules:ro
   core:
     image: ghcr.io/applicreation/harmony-core:latest
   catalog:
