@@ -4,7 +4,7 @@ repository:
   name: harmony-module-catalog
   description: Harmony module-catalog
   homepage: https://github.com/lickdltd/harmony-module-catalog
-  topics: harmony, module-catalog
+  topics: harmony, module, catalog
   private: false
   has_issues: true
   has_projects: false
