@@ -1,3 +1,11 @@
-FROM nginx:1-alpine
+FROM node:lts-alpine
 
-COPY ./app /usr/share/nginx/html
+WORKDIR /app
+
+COPY ./app /app
+
+RUN npm install
+
+EXPOSE 80
+
+CMD ["node", "index.js"]
