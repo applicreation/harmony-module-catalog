@@ -1,0 +1,19 @@
+div(class='p-3')
+    h1 Catalog
+    h2 #{count} Repositories
+    div(class='list-group')
+        each repo in repos
+            div(class='list-group-item p-3')
+                div
+                    a(href=repo.url target='_blank' class='me-2') #{repo.name}
+                    span(class='badge rounded-pill bg-secondary') #{repo.visibility}
+                div(class='small') #{repo.description || 'N/A'}
+                if repo.repositoryTopics.nodes.length > 0
+                    div(class='mt-1')
+                        each topic in repo.repositoryTopics.nodes
+                            span(class='badge rounded-pill bg-info me-1') #{topic.topic.name}
+                if repo.languages.nodes.length > 0
+                    div(class='mt-1')
+                        each language in repo.languages.nodes
+                            span(class='badge rounded-pill bg-primary me-1') #{language.name}
+                div(class='mt-1 small') #{repo.forkCount} forks, #{repo.stargazerCount} stars, #{repo.issues.totalCount} issues, #{repo.pullRequests.totalCount} pull requests
