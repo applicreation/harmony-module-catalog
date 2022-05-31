@@ -2,7 +2,7 @@
 
 ## Details
 
-This is an catalog module to be used with Harmony.
+This is a catalog module to be used with Harmony.
 
 ## Prerequisites
 
@@ -16,25 +16,23 @@ The only tool required is [Docker Desktop](https://www.docker.com/products/docke
 
 services:
   proxy:
-    image: ghcr.io/applicreation/harmony-proxy:latest
+    image: ghcr.io/applicreation/harmony-proxy:v0
     ports:
       - 80:80
   core:
-    image: ghcr.io/applicreation/harmony-core:latest
+    image: ghcr.io/applicreation/harmony-core:v0
     volumes:
       - ./.harmony/core:/root/.harmony:ro
   catalog:
-    image: ghcr.io/applicreation/harmony-module-catalog:latest
+    image: ghcr.io/applicreation/harmony-module-catalog:v0
 ```
 
 ```yaml
 # ./.harmony/core/config.yaml
 ---
 
-name: Catalog
 modules:
-  - name: Catalog
-    url: /catalog
+  - id: catalog
 ```
 
 ## Development

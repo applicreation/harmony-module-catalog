@@ -1,6 +1,4 @@
 ---
 
-name: Catalog module
 modules:
-  - name: Catalog
-    url: /catalog
+  - id: catalog

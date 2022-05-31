@@ -56,8 +56,16 @@ app.get('/module/catalog', async (req, res) => {
     res.render('index', {count: search.repositoryCount, repos: search.nodes});
 })
 
+app.get('/module/catalog/module.json', async (req, res) => {
+    res.send({
+        name: "Catalog",
+        description: "Harmony catalog module.",
+    });
+});
+
+
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Catalog app listening on port ${port}`);
 })
 
 function getConfig() {
