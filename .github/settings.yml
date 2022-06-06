@@ -3,7 +3,7 @@
 repository:
   name: harmony-module-catalog
   description: Harmony catalog module
-  homepage: https://github.com/lickdltd/harmony-module-catalog
+  homepage: https://github.com/applicreation/harmony-module-catalog
   topics: harmony, module, catalog
   private: false
   has_issues: true
