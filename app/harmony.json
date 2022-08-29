@@ -1,0 +1,9 @@
+{
+  "name": "Catalog",
+  "description": "Harmony catalog module.",
+  "version": "v0.3.0",
+  "github": {
+    "owner": "applicreation",
+    "name": "harmony-module-catalog"
+  }
+}
