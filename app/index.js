@@ -1,11 +1,15 @@
 const fs = require('fs')
 const express = require('express')
+const cors = require('cors')
 const YAML = require('yaml')
 const {graphql} = require('@octokit/graphql')
 const harmony = require('./harmony.json')
 
 const app = express()
 const port = 80
+
+app.use(cors())
+
 
 app.set('view engine', 'pug')
 
