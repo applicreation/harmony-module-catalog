@@ -7,6 +7,9 @@ services:
       - 80:80
   core:
     image: ghcr.io/applicreation/harmony-core:v0
+    restart: on-failure
+    env_file:
+      - ./.harmony/core/.env
     volumes:
       - ./.harmony/core:/root/.harmony:ro
   catalog:
@@ -17,7 +20,7 @@ services:
       - dev
     working_dir: /app
     env_file:
-      - ./.env
+      - ./.harmony/catalog/.env
     volumes:
       - ./.harmony/catalog:/root/.harmony:ro
       - ./app:/app
